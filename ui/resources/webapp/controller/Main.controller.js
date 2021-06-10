@@ -351,10 +351,15 @@ sap.ui.define([
                 }
             } else {
                 if (Object.values(data.advanced).length === 4) {
-                    var values = Object.values(data.advanced)
+ /*                   var values = Object.values(data.advanced)
                     for (var j = 0; j <= 3; j++) {
                         advanced[j + 1].Value = values[j];
-                    }
+                    }*/
+                    
+                    advanced[1].Value = data.advanced.targetName;
+                    advanced[2].Value = data.advanced.sourceName;
+                    advanced[3].Value = data.advanced.targetContainer;
+                    advanced[4].Value = data.advanced.sourceContainer;
                     main.Annotations = advanced;
                 } else {
                     MessageBox.error("Please provide all the details for HANA Advanced");
