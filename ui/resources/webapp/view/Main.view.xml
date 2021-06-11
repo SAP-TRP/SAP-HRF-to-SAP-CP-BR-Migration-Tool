@@ -113,10 +113,9 @@ xmlns="sap.m" xmlns:table="sap.ui.table" xmlns:layout="sap.ui.layout" xmlns:core
 
 						</table:template>
 					</table:Column>
-					<table:Column >
-						<Label text="{i18n>RULE_ID}"  sortProperty="ID"  filterProperty="ID"/>
+					<table:Column   sortProperty="ID"  filterProperty="ID">
+						<Label text="{i18n>RULE_ID}"/>
 						<table:template>
-
 							<Text text="{mainModel>ID}" wrapping="false" />
 						</table:template>
 					</table:Column>

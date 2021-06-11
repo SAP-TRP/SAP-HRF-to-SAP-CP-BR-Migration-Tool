@@ -11,7 +11,7 @@ sap.ui.define([
     return Controller.extend("com.trp.ui.migration.ui.controller.Monitor", {
         onInit: function() {
             var route = sap.ui.core.UIComponent.getRouterFor(this);
-            route.attachRouteMatched(this.setMoniteringData(), this);
+            route.attachRouteMatched(this.setMoniteringData.bind(this), this);
 
         },
 
